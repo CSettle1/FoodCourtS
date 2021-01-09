@@ -61,6 +61,13 @@ h3 {
   font-weight: var(--header-font-weight);
 }
 
+.page-title {
+  display: inline-block;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
 .standard-body {
   display: flex;
   flex-direction: column;
@@ -184,7 +191,7 @@ button:focus,
 /* Page body */
 .page-body {
   margin: 0 10px;
-  padding: 0 10px; 
+  padding: 0 10px;
   min-height: 75%;
   justify-content: center;
   text-align: center;
