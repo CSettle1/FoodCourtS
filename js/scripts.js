@@ -31,3 +31,7 @@ return {
 //console.log(pokemonRepository.getAll() );
 pokemonRepository.add({ name: 'item' });
 console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write(pokemon.name + " type: " + pokemon.type + " height " + pokemon.height + "<br>");
+});
