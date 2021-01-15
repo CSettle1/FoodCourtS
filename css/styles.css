@@ -23,13 +23,10 @@ Colors used
   --blue-color: #120db7;
   --dark-grey: #2b2b2b;
   --a-color: #357b70;
-  --visited-color: #000;
+  --black-color: #000;
   --active-color: #3340dc;
-  --hfgline-color: #da4f39;
+  --burntorange-color: #da4f39;
   --white-color: #fff;
-  --animation-primary-color: #edc655;
-  --animation-secondary-color: #fcffad;
-  --animation-tertiary-color: #f76414;
   --header-font-weight: 700;
 }
 
@@ -86,7 +83,7 @@ a {
 
 /* visited link */
 a:visited {
-  color: var(--visited-color);
+  color: var(--black-color);
 }
 
 /* No underlining when hovering over a link */
@@ -117,7 +114,7 @@ a:active {
 
 /* buttons */
 button,
-.button,
+.button
 button {
   /* overwrites browser defaults */
 
@@ -138,6 +135,24 @@ button {
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
+}
+
+.button-class {
+  background-color: var(--blue-color);
+  border: none;
+  color: var(--white-color);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /*Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: 2px solid var(--blue-color);
 }
 
 button:hover,
@@ -178,7 +193,6 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
-  border-bottom: 1px solid var(--hfgline-color);
 }
 
 .page-header__item {
@@ -246,7 +260,7 @@ ul {
   clear: both;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--hfgline-color);
+  border-top: 1px solid var(--burntorange-color);
   text-align: center;
 }
 
@@ -254,54 +268,9 @@ ul {
   box-sizing: border-box;
 }
 
-/* Animation Keyframes */
-@keyframes color-change {
-  0% {
-    fill: var(--animation-primary-color);
-  }
+/* Animation Keyframes (placeholder for now) */
 
-  50% {
-    fill: var(--animation-secondary-color);
-  }
 
-  100% {
-    fill: var(--animation-tertiary-color);
-  }
-}
-
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-/* work.html experience grid styles */
 
 /* start grid fallback */
 .grid__item {
@@ -323,7 +292,7 @@ ul {
   }
 
   .grid__item {
-    border: 1px solid var(--hfgline-color);
+    border: 1px solid var(--burntorange-color);
     padding: 10px;
     background-color: inherit;
     width: auto;
@@ -376,9 +345,5 @@ ul {
 
   h2 {
     font-size: 20px;
-  }
-
-  .page-body__item .berlin-illustration {
-    height: 280px;
   }
 }
