@@ -166,7 +166,7 @@ button:focus,
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  background: #fff;
+  background: var(--white-color);
   padding: 15px;
   width: 100%;
   max-width: 700px;
@@ -178,7 +178,7 @@ button:focus,
   -webkit-appearance: none;
   border: 0;
   background: none;
-  color: #777;
+  color: var(--ultimategray-color);
   text-decoration: underline;
 }
 
