@@ -17,14 +17,14 @@ function getAll() {
   return pokemonList;
 }
 function addListItem(pokemon){
-  let pokeItem = document.querySelector(".pokemon-list");
-  let listItem = document.createElement("li");
+  let pokeItem = document.querySelector(".list-group");
+  let listItem = document.createElement("group-list-item");
   pokeItem.appendChild(listItem);
-  listItem.classList.add('list-i');
-  let button = document.createElement('button');
-  button.classList.add('button-class');
+  listItem.classList.add("group-list-item");
+  let button = document.createElement("button");
+  button.classList.add("btn-primary");
   button.innerText = pokemon.name;
-  button.addEventListener('click', function() {
+  button.addEventListener("click", function() {
     showDetails(pokemon);
   })
   listItem.appendChild(button);
@@ -73,7 +73,7 @@ function showModal(pokemon) {
 
   //add the new modal content
   let closeButtonElement = document.createElement('button');
-  closeButtonElement.classList.add('modal-close');
+  closeButtonElement.classList.add("btn-secondary");
   closeButtonElement.innerText = 'Close';
   closeButtonElement.addEventListener('click', hideModal);
 
